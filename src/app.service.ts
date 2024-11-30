@@ -1,20 +1,20 @@
-import { Injectable } from '@nestjs/common';
-import { fetchContractData } from './service/aave2.service';
+import { Injectable } from "@nestjs/common";
+import { getUserAaveInfo } from "./service/aaveDocsRead.service";
 
 @Injectable()
 export class AppService {
   constructor() {
-    // Вызываем fetchContractData при инициализации сервиса
     this.initialize();
   }
-  getHello(): string {
-    return 'Hello World!';
-  }
+
   async initialize() {
+    const USER_ADRESS = "";
     try {
-      await fetchContractData();
+      const result = await getUserAaveInfo(USER_ADRESS);
+
+      console.log("результат:", result)
     } catch (error) {
-      console.error('Error fetching contract data:', error);
+      console.error("Error fetching contract data:", error);
     }
   }
 }
