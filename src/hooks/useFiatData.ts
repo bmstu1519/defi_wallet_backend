@@ -3,7 +3,7 @@ import { useHookstate, State } from "@hookstate/core";
 
 import { FiatRatesDataStore } from "../store/fiatRatesDataStore";
 
-import currencies from "../src/currencies/index.json";
+import currencies from "../currencies/index.json";
 
 /** hook to fetch fiat exchange rates
  * @returns { currentAddress,
