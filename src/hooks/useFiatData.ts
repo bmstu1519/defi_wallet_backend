@@ -7,12 +7,12 @@ import currencies from "../currencies/index.json";
 
 /** hook to fetch fiat exchange rates
  * @returns { currentAddress,
-    isFetching,
-    isError,
-    selectedCurrency,
-    currentRate,
-    currencyData,
-    setSelectedCurrency }
+ isFetching,
+ isError,
+ selectedCurrency,
+ currentRate,
+ currencyData,
+ setSelectedCurrency }
  */
 export function useFiatRates(shouldFetch: boolean = false) {
   const store = useHookstate(FiatRatesDataStore);
@@ -56,6 +56,6 @@ export function useFiatRates(shouldFetch: boolean = false) {
     currentRate:
       selectedCurrency === "USD" ? 1 : currencyData[selectedCurrency],
     currencyData,
-    setSelectedCurrency,
+    setSelectedCurrency
   };
 }
