@@ -17,7 +17,7 @@ import "../css/slider.css";
 
 const defaultLocale = "en";
 const { messages } = await import(`../src/locales/${defaultLocale}/messages`);
-import languages from "../src/languages/index.json";
+import languages from "../languages/index.json";
 
 i18n.load(defaultLocale, messages);
 i18n.activate(defaultLocale);
